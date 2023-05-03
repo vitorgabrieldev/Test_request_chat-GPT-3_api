@@ -1,0 +1,146 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+* {
+    color: #fefefe;
+}
+.card_left {
+    width: 18%;
+    background: #202123;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .8rem;
+}
+.buttonNewChat {
+    display: flex;
+    border: 1px solid #393939;
+    border-radius: 7px;
+    align-items: center;
+    padding: 0 0 0 1rem;
+    gap: 1rem;
+    height: 2.7rem;
+    transition: .33s;
+    cursor: pointer;
+}
+.buttonNewChat:hover {
+    background: #35374081;
+}
+.buttonNewChat > i {
+    color: #a9a9a9;
+    font-size: 1.4rem;
+}
+.titleButtonNewChat {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+}
+.dayChat {
+    color: #a9a9a9aa;
+    font-family: sans-serif;
+    font-size: .8rem;
+    font-weight: 100;
+}
+.containerChats {
+    display: flex;
+    margin: .1rem;
+    padding: .5rem;
+    border-radius: 7px;
+    gap: .7rem;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: .85rem;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: .33s;
+}
+.containerChats:hover {
+    background: #35374081;
+}
+.containerChats>i {
+    color: #8d8c8c;
+    font-weight: 900;
+}
+.decorationHr {
+    width: 100%;
+    height: 1px;
+    background: #414141;
+    margin-bottom: .4rem;
+}
+.contentLeft {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+.textUpgrade {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+}
+.NEWDecoration {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+    padding: .3rem .5rem .3rem .5rem;
+    background: #fae69e;
+    color: #000;
+    border-radius: 7px;
+}
+.accountupgrade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 0 .5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .33s;
+}
+.accountupgrade:hover {
+    background: #35374081;
+}
+.containerAccount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 0 .3rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .33s;
+}
+.containerAccount:hover {
+    background: #35374081;
+}
+.containerAccount>i {
+    color: #8d8c8c;
+}
+.imgProfile>img {
+    width: 1.5rem;
+}
+.nameProfile {
+    font-size: .8rem;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.infoProfile {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+
+
+
+.card_rigth {
+    width: 82%;
+}
+
