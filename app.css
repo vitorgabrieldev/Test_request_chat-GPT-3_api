@@ -135,12 +135,122 @@ body, html {
     align-items: center;
     gap: .5rem;
 }
-
-
-
-
-
 .card_rigth {
     width: 82%;
+    background: #343541;
+    text-align: center;
+}
+.messagesChat {
+    width: 100%;
+    height: 83%;
+}
+.containerBottom {
+    width: 75%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.inputChat {
+    background: #40414f;
+    padding: .6rem;
+    border-radius: 6px;
+}
+.inputChat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 2rem .3rem 1rem;
+}
+.inputChat>input {
+    background: transparent;
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+    color: #fefefe;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 90%;
+}
+.inputChat>i {
+    color: #8c8c8d;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: .3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .33s;
+}
+.inputChat>i:hover {
+    background:#343541;
+}
+.textDecoration {
+    font-family: sans-serif;
+    margin-top: 1rem;
+    font-size: .8rem;
+    color: #c0c0c2;
+}
+.textDecoration>a {
+    color: #c0c0c2;
+}
+.responsiveOpenMenu {
+    display: none;
+    position: absolute;
+    background: #343541;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+}
+.responsiveOpenMenu>i {
+    font-size: 2rem;
+    padding: .2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .33s;
+}
+.responsiveOpenMenu>i:hover {
+    background:#40414f;
+}
+.titleheader {
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
+/* Responsive */
+@media screen and (max-width:1000px){
+    .card_left {
+        display: none;
+    }
+    .card_rigth {
+        width: 100%;
+    }
+    .responsiveOpenMenu {
+        display: flex;
+    }
+}
+@media screen and (max-width:400px){
+    .containerBottom {
+        width: 100%;
+    }
+    .inputChat {
+        border-radius: 0;
+    }
+    .textDecoration {
+        display: none;
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 90%;
+    resize: none;
+    border: none;
+    padding: 8px;
+    background: #343541;
+    color: white;
+    outline: none;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+  textarea:focus {
+    border: 1px solid #8257e5;
+}
