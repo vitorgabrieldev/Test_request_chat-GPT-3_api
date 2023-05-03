@@ -1,5 +1,4 @@
 let inputGpt = document.getElementById("inputGpt");
-let result = document.getElementById("result");
 
 document.querySelector('#sendData').addEventListener('click', () => {
     SendQuestion();
@@ -26,17 +25,15 @@ function SendQuestion() {
   })
     .then((response) => response.json())
     .then((json) => {
-      if (result.value) result.value += "\n";
 
       if (json.error?.message) {
         result.value += `Error: ${json.error.message}`;
       } else if (json.choices?.[0].text) {
         var text = json.choices[0].text || "Sem resposta";
 
-        result.value += "Chat GPT: " + text;
+        printResult(text, 2);
       }
 
-      result.scrollTop = result.scrollHeight;
     })
     .catch((error) => console.error("Error:", error))
     .finally(() => {
@@ -45,11 +42,27 @@ function SendQuestion() {
       inputGpt.focus();
     });
 
-  if (result.value) result.value += "\n\n\n";
 
-  result.value += `I: ${sQuestion}`;
+  printResult(sQuestion, 1);
   inputGpt.value = "Loading...";
   inputGpt.disabled = true;
 
-  result.scrollTop = result.scrollHeight;
 }
+
+function printResult(msg, type) {
+  let datas = $(".messagesChat").html();
+  switch(type) {
+    case 1:
+      $(".messagesChat").html(`
+        ${datas}
+        <h1 class="myMessage"><span class="AutorI">Eu:</span>${msg}</h1>
+      `);
+      break;
+    case 2:
+      $(".messagesChat").html(`
+        ${datas}
+        <h1 class="yourMessage"><span class="AutorII">GPT:</span>${msg}</h1>
+      `);
+      break;
+  }
+};

@@ -141,8 +141,9 @@ body, html {
     text-align: center;
 }
 .messagesChat {
-    width: 100%;
-    height: 83%;
+    width: 90%;
+    height: 75%;
+    padding: 2rem;
 }
 .containerBottom {
     width: 75%;
@@ -238,7 +239,7 @@ body, html {
         display: none;
     }
 }
-
+/* 
 textarea {
     width: 100%;
     height: 90%;
@@ -253,4 +254,24 @@ textarea {
 }
   textarea:focus {
     border: 1px solid #8257e5;
+} */
+.messagesChat,
+.yourMessage {
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: .9rem;
+}
+.AutorI,
+.AutorII {
+    color: rgb(231, 231, 231);
+    padding: .2rem;
+    background:#8c8c8d34;
+    border-radius: 5px;
+    margin-right: .5rem;
+}
+.yourMessage {
+    background:#8c8c8d34;
+    padding: 1rem .5rem 1rem .5rem;
+    border-radius: 5px;
 }
