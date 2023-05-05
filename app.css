@@ -274,4 +274,12 @@ textarea {
     background:#8c8c8d34;
     padding: 1rem .5rem 1rem .5rem;
     border-radius: 5px;
+    box-shadow: 12px 12px 20px #00000060;
+}
+.error {
+    color: rgb(209, 43, 43);
+    background: rgba(255, 0, 0, 0.192);
+    padding: .3rem;
+    border-radius: 5px;
+    box-shadow: 12px 12px 20px #00000060;
 }

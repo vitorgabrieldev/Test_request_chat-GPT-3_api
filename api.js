@@ -4,7 +4,11 @@ document.querySelector('#sendData').addEventListener('click', () => {
     SendQuestion();
 });
 
-const OPENAI_API_KEY = "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";
+inputGpt.addEventListener("keypress", (e) => {
+  if (inputGpt.value && e.key === "Enter") SendQuestion();
+});
+
+const OPENAI_API_KEY = "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";
 
 function SendQuestion() {
   var sQuestion = inputGpt.value;
@@ -20,14 +24,15 @@ function SendQuestion() {
       model: "text-davinci-003",
       prompt: sQuestion,
       max_tokens: 2048, // tamanho da resposta
-      temperature: 1, // criatividade na resposta
+      temperature: .5 // criatividade na resposta
     }),
   })
     .then((response) => response.json())
     .then((json) => {
 
+
       if (json.error?.message) {
-        result.value += `Error: ${json.error.message}`;
+        printResult(`Error: ${json.error.message}`, 3);
       } else if (json.choices?.[0].text) {
         var text = json.choices[0].text || "Sem resposta";
 
@@ -42,6 +47,7 @@ function SendQuestion() {
       inputGpt.focus();
     });
 
+    $(".messagesChat").html('');
 
   printResult(sQuestion, 1);
   inputGpt.value = "Loading...";
@@ -64,5 +70,11 @@ function printResult(msg, type) {
         <h1 class="yourMessage"><span class="AutorII">GPT:</span>${msg}</h1>
       `);
       break;
-  }
+    case 3:
+      $(".messagesChat").html(`
+        ${datas}
+        <h1 class="error">${msg}</h1>
+      `);
+      break;
+  };
 };
