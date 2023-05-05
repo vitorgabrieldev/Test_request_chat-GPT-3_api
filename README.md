@@ -26,6 +26,10 @@ git clone https://github.com/vitorgabrieldev/Test_request_chat-GPT-3_api
 | Aguarde até que o modelo seja carregado. Em seguida, você poderá iniciar uma conversa com a cópia do ChatGPT |
 ---|
 
+## ``` screenshots ```
+![App Screenshot](https://i.pinimg.com/564x/24/8e/70/248e7041197db2d893b2875a39bceb0b.jpg)
+
+![App Screenshot](https://i.pinimg.com/564x/d5/c7/0c/d5c70c6f984a8227b8eb7108b9212e04.jpg)
 
 ## ``` Licença ```
 
