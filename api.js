@@ -8,7 +8,7 @@ inputGpt.addEventListener("keypress", (e) => {
   if (inputGpt.value && e.key === "Enter") SendQuestion();
 });
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 
 function SendQuestion() {
   var sQuestion = inputGpt.value;
