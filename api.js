@@ -8,7 +8,7 @@ inputGpt.addEventListener("keypress", (e) => {
   if (inputGpt.value && e.key === "Enter") SendQuestion();
 });
 
-const OPENAI_API_KEY = "SUA_CHAVE_DE_API";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 function SendQuestion() {
   var sQuestion = inputGpt.value;
@@ -24,7 +24,7 @@ function SendQuestion() {
       model: "text-davinci-003",
       prompt: sQuestion,
       max_tokens: 2048, // tamanho da resposta
-      temperature: .5 // criatividade na resposta
+      temperature: 1 // criatividade na resposta
     }),
   })
     .then((response) => response.json())
